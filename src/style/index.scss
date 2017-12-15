@@ -102,6 +102,16 @@ nav .active {
 	color: #FFA000 !important;
 }
 
+/* permanent background in nav for active elements
+nav .active li {
+	background-color: #FFA00015 !important;
+}
+*/
+
 nav .active i {
 	color: #FFA000 !important;
+}
+
+.mdc-permanent-drawer .mdc-list-item::before {
+	color: #FFA000;
 }
