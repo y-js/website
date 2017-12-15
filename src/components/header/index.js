@@ -53,7 +53,9 @@ export default class Header extends Component {
 	render() {
 		return (
 			<Drawer.PermanentDrawer ref={this.drawerRef} open={true}>
-				<div class="mdc-permanent-drawer__toolbar-spacer"></div>
+				<div class="mdc-permanent-drawer__toolbar-spacer" style="padding: 0;">
+					<img src="http://y-js.org/images/yjs.png" style="margin: 0px auto; height: 80%;" />
+				</div>
 				<List class="unstyle-links">
 				  <Link href="/" activeClassName="active" onClick={this.goHome}>
 						<List.Item>
