@@ -1,3 +1,13 @@
+
+$mdc-theme-primary: blue;
+$mdc-theme-primary-light: blue;
+$mdc-theme-primary-dark: green;
+$mdc-theme-secondary-light: green;
+$mdc-theme-secondary-dark: green;
+
+@import "@material/theme/mdc-theme";
+
+
 html, body {
 	height: 100%;
 	width: 100%;
@@ -83,10 +93,15 @@ html, body {
 	color: #fff;
 }
 
-$mdc-theme-primary: blue;
-$mdc-theme-primary-light: blue;
-$mdc-theme-primary-dark: green;
-$mdc-theme-secondary-light: green;
-$mdc-theme-secondary-dark: green;
+nav a {
+	color: inherit;
+	text-decoration: none;
+}
 
-@import "@material/theme/mdc-theme";
+nav .active {
+	color: #FFA000 !important;
+}
+
+nav .active i {
+	color: #FFA000 !important;
+}

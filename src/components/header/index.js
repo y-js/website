@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { route } from 'preact-router';
+import { Link } from 'preact-router/match'
 import Toolbar from 'preact-material-components/Toolbar';
 import Drawer from 'preact-material-components/Drawer';
 import List from 'preact-material-components/List';
@@ -10,7 +11,6 @@ import 'preact-material-components/Dialog/style.css';
 import 'preact-material-components/Drawer/style.css';
 import 'preact-material-components/List/style.css';
 import 'preact-material-components/Toolbar/style.css';
-// import { drawer } from './style.css';
 
 export default class Header extends Component {
 	closeDrawer() {
@@ -29,7 +29,10 @@ export default class Header extends Component {
 	};
 
 	goHome = this.linkTo('/');
-	goToMyProfile = this.linkTo('/profile');
+	goToExamples = this.linkTo('/examples')
+	goToTutorial = this.linkTo('/tutorial')
+	goToModules = this.linkTo('/modules')
+	goToDocumentation = this.linkTo('/documentation')
 
 	toggleDarkTheme = () => {
 		this.setState(
@@ -51,15 +54,37 @@ export default class Header extends Component {
 		return (
 			<Drawer.PermanentDrawer ref={this.drawerRef} open={true}>
 				<div class="mdc-permanent-drawer__toolbar-spacer"></div>
-				<List>
-					<List.LinkItem onClick={this.goHome}>
-						<List.ItemIcon>home</List.ItemIcon>
-						Home
-					</List.LinkItem>
-					<List.LinkItem onClick={this.goToMyProfile}>
-						<List.ItemIcon>account_circle</List.ItemIcon>
-						Profile
-					</List.LinkItem>
+				<List class="unstyle-links">
+				  <Link href="/" activeClassName="active" onClick={this.goHome}>
+						<List.Item>
+							<List.ItemIcon>home</List.ItemIcon>
+							Home
+						</List.Item>
+					</Link>
+					<Link href="/examples" activeClassName="active" onClick={this.goToExamples}>
+					 <List.Item>
+						 <List.ItemIcon>play_circle_filled</List.ItemIcon>
+						 Examples
+					 </List.Item>
+				 </Link>
+				 <Link href="/tutorial" activeClassName="active" onClick={this.goToTutorial}>
+					 <List.Item>
+						 <List.ItemIcon>directions</List.ItemIcon>
+						 Tutorial
+					 </List.Item>
+				 </Link>
+				 <Link href="/modules" activeClassName="active" onClick={this.goToModules}>
+					 <List.Item>
+						 <List.ItemIcon>view_module</List.ItemIcon>
+						 Modules
+					 </List.Item>
+				 </Link>
+				 <Link href="/documentation" activeClassName="active" onClick={this.goToDocumentation}>
+					 <List.Item>
+						 <List.ItemIcon>school</List.ItemIcon>
+						 Documentation
+					 </List.Item>
+				 </Link>
 				</List>
 			</Drawer.PermanentDrawer>
 		);
