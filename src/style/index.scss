@@ -58,7 +58,7 @@ html, body {
 	max-width: 1300px;
 }
 
-#app-content * {
+#app-content > * {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 1000px;
@@ -116,4 +116,8 @@ nav .active i {
 
 .mdc-permanent-drawer .mdc-list-item::before {
 	color: #FFA000;
+}
+
+#app-content .mdc-card {
+  margin-bottom: 34px;
 }
