@@ -88,6 +88,7 @@ export default class Header extends Component {
 					 </List.Item>
 				 </Link>
 				</List>
+				<iframe src="https://ghbtns.com/github-btn.html?user=y-js&repo=yjs&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px" style="position: absolute; bottom: 50px;left: 60px;"></iframe>
 			</Drawer.PermanentDrawer>
 		);
 	}

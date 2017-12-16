@@ -2,108 +2,173 @@ import { h, Component } from 'preact';
 import Card from 'preact-material-components/Card';
 import 'preact-material-components/Card/style.css';
 import 'preact-material-components/Button/style.css';
+import Textfield from 'preact-material-components/TextField';
+import 'preact-material-components/TextField/style.css';
 import style from './style';
 
 export default class Home extends Component {
 	render() {
 		return (
 			<div class={style.home}>
-				<h1>Home route</h1>
 				<Card>
 					<Card.Primary>
-						<Card.Title>Home card</Card.Title>
-						<Card.Subtitle>Welcome to home route</Card.Subtitle>
+						<Card.Title><img src="/assets/images/yjs.png" alt="Yjs"/></Card.Title>
 					</Card.Primary>
 					<Card.SupportingText>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+						Yjs is a framework for real-time shared data. Several hosts can manipulate the same data at the same time.
+						Yjs takes care of the conflicts.
+					</Card.SupportingText>
+					<Card.SupportingText>
+						Applications for this framework include collaborative editing, collaborative drawing, and collaborative modeling.
+						But Yjs is really a general purpose framework for any kind of data that can be manipulated by several clients at the same time.
+					</Card.SupportingText>
+					<Card.SupportingText>
+					  Yjs implements shared data types as Concurrent Replicated Data Types (CRDT) and therefore supports peer-to-peer networks to distribute document updates.
+					  In fact you can build a <a>Connector</a> for any kind of network. Check <a>Modules</a> to find all the options you have.
+					</Card.SupportingText>
+					<Card.SupportingText>
+					  Yjs can store the shared document in a persistent database to store the document for offline use.
+						Try turning of your internet connection and reload this website. All shared data will still exists
+						and will be synced when the connection has been reestablished.
+					</Card.SupportingText>
+				</Card>
+				<Card>
+					<Card.Primary>
+						<Card.Title>Collaborative Editing Demo</Card.Title>
+					</Card.Primary>
+					<Card.SupportingText>
+						<Textfield helptext={false} style="height:150px;" textarea fullwidth type="text" dense multiline/>
 					</Card.SupportingText>
 					<Card.Actions>
-						<Card.Action>OKAY</Card.Action>
+						<Card.Action>See Code</Card.Action>
 					</Card.Actions>
 				</Card>
 				<Card>
 					<Card.Primary>
-						<Card.Title>Home card</Card.Title>
-						<Card.Subtitle>Welcome to home route</Card.Subtitle>
+						<Card.Title>Collaborative Drawing Demo</Card.Title>
 					</Card.Primary>
 					<Card.SupportingText>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+					  Draw here
 					</Card.SupportingText>
 					<Card.Actions>
-						<Card.Action>OKAY</Card.Action>
+						<Card.Action>See Code</Card.Action>
 					</Card.Actions>
 				</Card>
 				<Card>
 					<Card.Primary>
-						<Card.Title>Home card</Card.Title>
-						<Card.Subtitle>Welcome to home route</Card.Subtitle>
+						<Card.Title>Shared Types</Card.Title>
 					</Card.Primary>
 					<Card.SupportingText>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+					  Yjs provides apstractions over the shared data as shared data types. Shared types
+						can be manipulated, observed, and provide utility functions to bind the shared data to objects.
 					</Card.SupportingText>
-					<Card.Actions>
-						<Card.Action>OKAY</Card.Action>
-					</Card.Actions>
+					<Card.SupportingText>
+						<table>
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="https://github.com/y-js/y-map">map</a></td>
+									<td>A shared Map implementation. Maps from text to any stringify-able object</td>
+								</tr>
+								<tr>
+									<td><a href="https://github.com/y-js/y-array">array</a></td>
+									<td>A shared Array implementation</td>
+								</tr>
+								<tr>
+									<td><a href="https://github.com/y-js/y-xml">xml</a></td>
+									<td>An implementation of the DOM. You can create a two way binding to Browser DOM objects</td>
+								</tr>
+								<tr>
+									<td><a href="https://github.com/y-js/y-text">text</a></td>
+									<td>Collaborate on text. Supports two way binding to the <a href="https://ace.c9.io">Ace Editor</a>, textareas, input elements, and HTML elements (e.g. &lt;<em>h1</em>&gt;, or &lt;<em>p</em>&gt;)</td>
+								</tr>
+								<tr>
+									<td><a href="https://github.com/y-js/y-richtext">richtext</a></td>
+									<td>Collaborate on rich text. Supports two way binding to the <a href="http://quilljs.com/">Quill Rich Text Editor</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</Card.SupportingText>
 				</Card>
 				<Card>
 					<Card.Primary>
-						<Card.Title>Home card</Card.Title>
-						<Card.Subtitle>Welcome to home route</Card.Subtitle>
+						<Card.Title>Connectors</Card.Title>
 					</Card.Primary>
 					<Card.SupportingText>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+						<table>
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="https://github.com/y-js/y-webrtc">webrtc</a></td>
+									<td>Propagate updates Browser2Browser via WebRTC</td>
+								</tr>
+								<tr>
+									<td><a href="https://github.com/y-js/y-websockets-client">websockets</a></td>
+									<td>Set up <a href="https://github.com/y-js/y-websockets-client">a central server</a>, and connect to it via websockets</td>
+								</tr>
+								<tr>
+									<td><a href="https://github.com/y-js/y-xmpp">xmpp</a></td>
+									<td>Propagate updates in a XMPP multi-user-chat room (<a href="http://xmpp.org/extensions/xep-0045.html">XEP-0045</a>)</td>
+								</tr>
+								<tr>
+									<td><a href="https://github.com/y-js/y-test">test</a></td>
+									<td>A Connector for testing purposes. It is designed to simulate delays that happen in worst case scenarios</td>
+								</tr>
+							</tbody>
+						</table>
 					</Card.SupportingText>
-					<Card.Actions>
-						<Card.Action>OKAY</Card.Action>
-					</Card.Actions>
 				</Card>
 				<Card>
 					<Card.Primary>
-						<Card.Title>Home card</Card.Title>
-						<Card.Subtitle>Welcome to home route</Card.Subtitle>
+						<Card.Title>Database adapters</Card.Title>
 					</Card.Primary>
 					<Card.SupportingText>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+					<table>
+						<thead>
+							<tr>
+							<th>Name</th>
+							<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="https://github.com/y-js/y-memory">memory</a></td>
+								<td>In-memory storage</td>
+							</tr>
+							<tr>
+								<td><a href="https://github.com/y-js/y-indexeddb">indexeddb</a></td>
+								<td>Offline storage for the browser</td>
+							</tr>
+							<tr>
+								<td><a href="https://github.com/y-js/y-leveldb">leveldb</a></td>
+								<td>Persistent storage for node apps</td>
+							</tr>
+						</tbody>
+					</table>
 					</Card.SupportingText>
-					<Card.Actions>
-						<Card.Action>OKAY</Card.Action>
-					</Card.Actions>
 				</Card>
 				<Card>
 					<Card.Primary>
-						<Card.Title>Home card</Card.Title>
-						<Card.Subtitle>Welcome to home route</Card.Subtitle>
+						<Card.Title>License</Card.Title>
 					</Card.Primary>
 					<Card.SupportingText>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+						Yjs is MIT licensed and hosted on GitHub!
 					</Card.SupportingText>
-					<Card.Actions>
-						<Card.Action>OKAY</Card.Action>
-					</Card.Actions>
-				</Card>
-				<Card>
-					<Card.Primary>
-						<Card.Title>Home card</Card.Title>
-						<Card.Subtitle>Welcome to home route</Card.Subtitle>
-					</Card.Primary>
 					<Card.SupportingText>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+						<img alt="Open Source Love" src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/" />
+						<span style="width:18px;display:inline-block"/>
+						<iframe src="https://ghbtns.com/github-btn.html?user=y-js&repo=yjs&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 					</Card.SupportingText>
-					<Card.Actions>
-						<Card.Action>OKAY</Card.Action>
-					</Card.Actions>
-				</Card>
-				<Card>
-					<Card.Primary>
-						<Card.Title>Home card</Card.Title>
-						<Card.Subtitle>Welcome to home route</Card.Subtitle>
-					</Card.Primary>
-					<Card.SupportingText>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-					</Card.SupportingText>
-					<Card.Actions>
-						<Card.Action>OKAY</Card.Action>
-					</Card.Actions>
 				</Card>
 			</div>
 		);
