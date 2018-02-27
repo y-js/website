@@ -28,7 +28,7 @@ export default class Home extends Component {
 					</Card.SupportingText>
 					<Card.SupportingText>
 					  Yjs can store the shared document in a persistent database to store the document for offline use.
-						Try turning of your internet connection and reload this website. All shared data will still exists
+						Try turning off your internet connection and reload this website. All shared data will still exists
 						and will be synced when the connection has been reestablished.
 					</Card.SupportingText>
 				</Card>
@@ -162,12 +162,11 @@ export default class Home extends Component {
 						<Card.Title>License</Card.Title>
 					</Card.Primary>
 					<Card.SupportingText>
-						Yjs is MIT licensed and hosted on GitHub!
+						Yjs is proudly MIT licensed!
 					</Card.SupportingText>
 					<Card.SupportingText>
 						<img alt="Open Source Love" src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/" />
 						<span style="width:18px;display:inline-block"/>
-						<iframe src="https://ghbtns.com/github-btn.html?user=y-js&repo=yjs&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 					</Card.SupportingText>
 				</Card>
 			</div>

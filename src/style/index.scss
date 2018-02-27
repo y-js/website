@@ -115,6 +115,10 @@ table th {
 	color: #fff;
 }
 
+nav {
+	padding: 0 !important;
+}
+
 nav a {
 	color: inherit;
 	text-decoration: none;
@@ -141,4 +145,10 @@ nav .active i {
 #app-content .mdc-card {
   margin-bottom: 34px;
 	padding: 20px;
+}
+
+.ql-container {
+  max-height: 300px;
+	min-height: 300px;
+  overflow: auto;
 }

@@ -13,7 +13,7 @@ import 'preact-material-components/List/style.css';
 import 'preact-material-components/Toolbar/style.css';
 
 export default class Header extends Component {
-	closeDrawer() {
+	closeDrawer () {
 	  this.drawer.MDComponent.open = false;
 	}
 
