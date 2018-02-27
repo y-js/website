@@ -13,26 +13,28 @@ export default class QuillDemo extends Component {
   }
 
 	componentDidMount() {
-    const editorElement = document.createElement('div')
-		this.base.innerHTML = ''
-    this.base.insertBefore(editorElement, null)
-    this.quill = new Quill(editorElement, {
-      modules: {
-        toolbar: [
-          [{ header: [1, 2, false] }],
-          ['bold', 'italic', 'underline'],
-          ['image', 'code-block'],
-          [{ color: [] }, { background: [] }],    // Snow theme fills in values
-          [{ script: 'sub' }, { script: 'super' }],
-          ['link', 'image'],
-          ['link', 'code-block'],
-          [{ list: 'ordered' }, { list: 'bullet' }]
-        ]
-      },
-      placeholder: 'Compose an epic...',
-      theme: 'snow'  // or 'bubble'
-    })
-    this.quillBinding = new Y.QuillBinding(y.define('quill-demo', Y.Text), this.quill)
+    if (typeof window !== 'undefined') {
+      const editorElement = document.createElement('div')
+  		this.base.innerHTML = ''
+      this.base.insertBefore(editorElement, null)
+      this.quill = new Quill(editorElement, {
+        modules: {
+          toolbar: [
+            [{ header: [1, 2, false] }],
+            ['bold', 'italic', 'underline'],
+            ['image', 'code-block'],
+            [{ color: [] }, { background: [] }],    // Snow theme fills in values
+            [{ script: 'sub' }, { script: 'super' }],
+            ['link', 'image'],
+            ['link', 'code-block'],
+            [{ list: 'ordered' }, { list: 'bullet' }]
+          ]
+        },
+        placeholder: 'Compose an epic...',
+        theme: 'snow'  // or 'bubble'
+      })
+      this.quillBinding = new Y.QuillBinding(y.define('quill-demo', Y.Text), this.quill)
+    }
 	}
 
 	componentWillUnmount() {

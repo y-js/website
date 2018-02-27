@@ -4,6 +4,7 @@ import 'preact-material-components/Card/style.css'
 import 'preact-material-components/Button/style.css'
 import QuillDemo from './quill-demo'
 import JigsawDemo from './jigsaw-demo'
+import DrawingDemo from './drawing-demo'
 import style from './style'
 
 export default class Home extends Component {
@@ -37,7 +38,7 @@ export default class Home extends Component {
 						<Card.Title>Drawing Demo</Card.Title>
 					</Card.Primary>
 					<Card.SupportingText>
-						..
+						<DrawingDemo></DrawingDemo>
 					</Card.SupportingText>
 					<Card.Actions>
 						<Card.Action>See Code</Card.Action>
