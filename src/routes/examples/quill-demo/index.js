@@ -35,7 +35,6 @@ export default class QuillDemo extends Component {
     this.quillBinding = new Y.QuillBinding(y.define('quill-demo', Y.Text), this.quill)
 	}
 
-	// gets called just before navigating away from the route
 	componentWillUnmount() {
 		this.quillBinding.destroy()
 	}

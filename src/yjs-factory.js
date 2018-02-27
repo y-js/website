@@ -16,5 +16,6 @@ export function createYjsInstance (room) {
       }
     }))
   }
+  window.y = instances.get(room)
   return instances.get(room)
 }

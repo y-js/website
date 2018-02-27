@@ -5,6 +5,7 @@ import 'preact-material-components/Button/style.css';
 import Textfield from 'preact-material-components/TextField';
 import 'preact-material-components/TextField/style.css';
 import style from './style';
+import QuillDemo from '../examples/quill-demo'
 
 export default class Home extends Component {
 	render() {
@@ -37,7 +38,7 @@ export default class Home extends Component {
 						<Card.Title>Collaborative Editing Demo</Card.Title>
 					</Card.Primary>
 					<Card.SupportingText>
-						<Textfield helptext={false} style="height:150px;" textarea fullwidth type="text" dense multiline/>
+						<QuillDemo></QuillDemo>
 					</Card.SupportingText>
 					<Card.Actions>
 						<Card.Action>See Code</Card.Action>
