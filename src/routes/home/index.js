@@ -40,20 +40,6 @@ export default class Home extends Component {
 					<Card.SupportingText>
 						<QuillDemo></QuillDemo>
 					</Card.SupportingText>
-					<Card.Actions>
-						<Card.Action>See Code</Card.Action>
-					</Card.Actions>
-				</Card>
-				<Card>
-					<Card.Primary>
-						<Card.Title>Collaborative Drawing Demo</Card.Title>
-					</Card.Primary>
-					<Card.SupportingText>
-					  Draw here
-					</Card.SupportingText>
-					<Card.Actions>
-						<Card.Action>See Code</Card.Action>
-					</Card.Actions>
 				</Card>
 				<Card>
 					<Card.Primary>
@@ -122,8 +108,8 @@ export default class Home extends Component {
 									<td>Propagate updates in a XMPP multi-user-chat room (<a href="http://xmpp.org/extensions/xep-0045.html">XEP-0045</a>)</td>
 								</tr>
 								<tr>
-									<td><a href="https://github.com/y-js/y-test">test</a></td>
-									<td>A Connector for testing purposes. It is designed to simulate delays that happen in worst case scenarios</td>
+									<td><a href="https://github.com/pgte/y-ipfs-store">ipfs</a></td>
+									<td>A connector for the IPFS network!</td>
 								</tr>
 							</tbody>
 						</table>
@@ -131,7 +117,7 @@ export default class Home extends Component {
 				</Card>
 				<Card>
 					<Card.Primary>
-						<Card.Title>Database adapters</Card.Title>
+						<Card.Title>Persistence</Card.Title>
 					</Card.Primary>
 					<Card.SupportingText>
 					<table>
