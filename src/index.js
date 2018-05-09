@@ -1,5 +1,5 @@
-import './style';
-import './style/mdc-restyle'
-import App from './components/app';
+import './style/index.scss'
+import './style/mdc-restyle.css'
+import App from './components/app'
 
-export default App;
+export default App

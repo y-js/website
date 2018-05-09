@@ -1,7 +1,8 @@
 
-import Y from 'yjs'
-export { default as Y } from 'yjs/src/Y.dist.js'
 import extendWebsocketsClient from 'y-websockets-client'
+import _Y from 'yjs/src/Y.dist.js'
+
+export const Y = _Y
 
 extendWebsocketsClient(Y)
 
