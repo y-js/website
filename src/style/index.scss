@@ -1,5 +1,6 @@
 
 @import url('//fonts.googleapis.com/css?family=Nunito:400,300,700|Righteous');
+// TODO: remove font-awesome when done with twitter logos etc
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 //Color definitions
@@ -152,7 +153,7 @@ h3 {
 //Setting up full-bleed images, shrinking the height on smaller viewports 
 .full-bleed {
   background-size: cover;
-  min-height: 300px;
+  min-height: 222px;
   width: 100%;
   background-position: center center;
 	background-repeat: no-repeat;
