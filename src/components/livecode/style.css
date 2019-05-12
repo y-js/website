@@ -1,0 +1,10 @@
+
+.livecode {
+  height: 300px;
+  width: 100%;
+}
+
+.codearea {
+  background-color: var(--background-color);
+  height: 30px;
+}

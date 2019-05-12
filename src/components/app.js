@@ -1,50 +1,34 @@
-import { h, Component } from 'preact';
-import { Router } from 'preact-router';
 
-import Header from './header';
-import NavBar from './navbar'
-import Footer from './footer'
-import Home from '../routes/home';
-import Demos from '../routes/demos';
+import { Component } from 'preact'
+import { Router } from 'preact-router'
 
-// import Home from 'async!../routes/home';
-// import Profile from 'async!../routes/profile';
-
-if (module.hot) {
-  require('preact/debug');
-}
+// Code-splitting is automated for routes
+import Home from '../routes/home'
+import Profile from '../routes/profile'
+import Navbar from './navbar'
 
 export default class App extends Component {
-  /** Gets fired when the route changes.
-   *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
-   *	@param {string} event.url	The newly routed URL
+  /**
+   * Gets fired when the route changes.
+   * @param {Object} event "change" event from [preact-router](http://git.io/preact-router)
+   * @param {string} event.url The newly routed URL
    */
   handleRoute = e => {
-    this.currentUrl = e.url;
+    this.currentUrl = e.url
   };
 
-  render() {
+  render () {
     return (
-      <div>
-        <Header />
-        <NavBar />
-        <Router onChange={this.handleRoute}>
-          <Home path="/" />
-          <Demos path="/demos" />
-        </Router>
-        <Footer />
+      <div id='app'>
+        <Navbar />
+        <div id='content'>
+          <Router onChange={this.handleRoute}>
+            <Home path='/' />
+            <Profile path='/profile/' user='me' />
+            <Profile path='/profile/:user' />
+          </Router>
+        </div>
       </div>
     )
-    /*
-    return (
-      <div id="app">
-        <Header />
-        <Router onChange={this.handleRoute}>
-          <Home path="/" />
-          <Profile path="/profile/" user="me" />
-          <Profile path="/profile/:user" />
-        </Router>
-      </div>
-    );*/
   }
 }

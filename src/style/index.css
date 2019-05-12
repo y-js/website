@@ -1,0 +1,51 @@
+
+html {
+	--background-color: #fdfdfd;
+	--navbar-color: #222;
+}
+
+html, body {
+	font-size: 110%;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: var(--background-color);
+	font-family: 'Helvetica Neue', arial, sans-serif;
+	font-weight: 400;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#app {
+	height: 100%;
+}
+
+@media (min-width: 45rem) {
+	#app {
+		display: flex;
+	}
+
+	#app #content {
+		flex: 1;
+	}
+
+	#app nav {
+		width: 11rem;
+	}
+}
+
+@media (max-width: 45rem) {
+	#app #content {
+		width: 100%;
+	}
+
+	#app nav {
+		width: 100%;
+	}
+}
